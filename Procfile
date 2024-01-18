@@ -1,0 +1,1 @@
+web: gunicorn ten_forward.wsgi
