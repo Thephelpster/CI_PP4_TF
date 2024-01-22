@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['*',
-                 '.herokuapp.com']
+                 'https://ten-forward-53badab24b10.herokuapp.com']
 
 
 # Application definition
