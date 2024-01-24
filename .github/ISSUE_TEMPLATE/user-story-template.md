@@ -9,8 +9,10 @@ assignees: ''
 
 As a **role** I can **capability** so that **received benefit**
 
-- Acceptance criteria 1
+**Given**
 
-- Acceptance criteria 2
+**When**
 
-- Acceptance criteria 3
+**Then**
+
+**And** (If needed/Optional)
