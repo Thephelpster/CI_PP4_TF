@@ -5,7 +5,7 @@
 {% block content %}
 
 <div>
-    <hr><h2>Starters</h2><hr>
+    <hr><h2>Bajoran</h2><hr>
     {% for food in food_list %}
     {% if food.type_of_food == 0 and food.available == 1 %}
     <br><h3>{{ food.food_name }}</h3>
@@ -18,7 +18,7 @@
 </div>
 
 <div>
-    <hr><h2>Mains</h2><hr>
+    <hr><h2>Klingon</h2><hr>
     {% for food in food_list %}
     {% if food.type_of_food == 1 and food.available == 1 %}
     <br><h3>{{ food.food_name }}</h3>
@@ -31,7 +31,7 @@
 </div>
 
 <div>
-    <hr><h2>Desserts</h2><hr>
+    <hr><h2>Talaxian</h2><hr>
     {% for food in food_list %}
     {% if food.type_of_food == 2 and food.available == 1 %}
     <br><h3>{{ food.food_name }}</h3>
