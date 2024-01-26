@@ -8,19 +8,25 @@
         <div class="card" style="width: 18rem;">
             <img src="{% static 'images/gagh.jpeg' %}" class="card-img-top" alt="Image of Gagh">
             <div class="card-body">
-                <p class="card-text">Menus</p>
+                <a href="{% url 'menu' %}">
+                    <h2>Menus</h2>
+                </a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="{% static 'images/ten-forward-table.jpg' %}" class="card-img-top" alt="Ten-Forward tables">
             <div class="card-body">
-                <p class="card-text">Book a Table</p>
+                <a href="#">
+                    <h2>Book a Table</h2>
+                </a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="{% static 'images/star-trek-communicator.jpg' %}" class="card-img-top" alt="Star Trek Communicator">
             <div class="card-body">
-                <p class="card-text">Contact Us</p>
+                <a href="#">
+                    <h2>Contact Us</h2>
+                </a>
             </div>
         </div>
     </div>
