@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-TYPE_OF_FOOD = ((0, 'Starters'), (1, 'Mains'), (2, 'Desserts'), (3, 'New'))
+TYPE_OF_FOOD = ((0, 'Bajoran'), (1, 'Klingon'), (2, 'Talaxian'), (3, 'Mix'))
 
 class Food(models.Model):
     food_id = models.AutoField(primary_key=True)
