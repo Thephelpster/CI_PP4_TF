@@ -3,8 +3,27 @@
 {% load static %}
 
 {% block content %}
-
-<h1>hello world</h1>
-
+<section class="container-fluid">
+    <div class="row text-center mt-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/gagh.jpeg' %}" class="card-img-top" alt="Image of Gagh">
+            <div class="card-body">
+                <p class="card-text">Menus</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/ten-forward-table.jpg' %}" class="card-img-top" alt="Ten-Forward tables">
+            <div class="card-body">
+                <p class="card-text">Book a Table</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/star-trek-communicator.jpg' %}" class="card-img-top" alt="Star Trek Communicator">
+            <div class="card-body">
+                <p class="card-text">Contact Us</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 {%endblock%}
