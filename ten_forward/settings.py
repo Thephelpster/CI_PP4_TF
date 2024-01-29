@@ -29,6 +29,14 @@ DEBUG = os.environ.get('DEBUG')
 ALLOWED_HOSTS = ['*',
                  'https://ten-forward-53badab24b10.herokuapp.com']
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 # Application definition
 
@@ -48,6 +56,9 @@ INSTALLED_APPS = [
     'home',
     'contact',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
