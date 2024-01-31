@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 
-<h1 class="mt-5 mb-5 mx-auto">500 Internal Server Error</h1>
+<h1 class="mt-5 mb-5 mx-auto">400 Bad Request</h1>
 <h2 class="mx-auto p-3">Something went wrong</h2>
-<img src="{% static 'images/500errorimage.jpg' %}" alt="500 page image - lost in space" class="mx-auto p-3" style="max-width:80%;">
+<img src="{% static 'images/400errorimage.jpg' %}" alt="400 page image - lost in space" class="mx-auto p-3" style="max-width:80%;">
 
 <div class="col-md-3">
     <button class="btn btn-success"><a href="{% url 'home' %}" class="booking-success-button">Home</a></button>

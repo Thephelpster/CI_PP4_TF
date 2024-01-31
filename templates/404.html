@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="mt-5 mb-5 mx-auto">404 Error Page</h1>
+<h2 class="mx-auto p-3">Page Not Found</h2>
+<img src="{% static 'images/404errorimage.jpg' %}" alt="404 page image - lost in space" class="mx-auto p-3" style="max-width:80%;">
+
+<div class="col-md-3">
+    <button class="btn btn-success"><a href="{% url 'home' %}" class="booking-success-button">Home</a></button>
+</div>
+
+
+{% endblock %}
