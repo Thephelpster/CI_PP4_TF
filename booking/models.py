@@ -70,7 +70,7 @@ class Booking(models.Model):
     status = models.CharField(
         max_length=25,
         choices=status_options,
-        default='awaiting confirmation'
+        default='Awaiting confirmation'
         )
     seats = (
         (1, "1 Guest"),
