@@ -8,13 +8,17 @@
         <div class="card" style="width: 18rem;">
             <img src="{% static 'images/gagh.jpeg' %}" class="card-img-top" alt="Image of Gagh">
             <div class="card-body">
-                <p class="card-text">Food</p>
+                <a href="{% url 'food_menu' %}">
+                    <h2>Food</h2>
+                </a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="{% static 'images/andorian-wiskey.jpg' %}" class="card-img-top" alt="Image of Andorian wiskey">
             <div class="card-body">
-                <p class="card-text">Drinks</p>
+                <a href="{% url 'drink_menu' %}">
+                    <h2>Drinks</h2>
+                </a>
             </div>
         </div>
     </div>
