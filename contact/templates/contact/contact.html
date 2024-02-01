@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
@@ -9,29 +9,45 @@
     </div>
 </div>
 
-<div class="row d-flex my-5 justify-content-center">
-    <div class="w-50 p-3">
-        <form id="emailForm" method="post">
-            {% csrf_token %} {{ form.non_field_errors }}
-            <div class="mb-3">
-                {{ form.name }}
-                {{ form.name.errors }}
-            </div>
-            <div class="mb-3">
-                {{ form.email }}
-                {{ form.email.errors }}
-            </div>
-            <div class="mb-2">
-                {{ form.message }}
-                {{ form.message.errors }}
-            </div>
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary">Send</button>
-            </div>
-        </form>
+
+<div class="col-12 p-5 bg-darker rounded booking-card">
+    {% if not user.is_authenticated %}
+    <h2>Message Us</h2>
+    <p>Please login to slide into our DM's!</p>
+    <button class="btn btn-success" type="submit"><a href="{% url 'account_login' %}">Go to Login
+            Page</a></button>
+    {% else %}
+    {% if user.is_authenticated %}
+    <div class="row text-center">
+        <div class="col-12">
+            <h2 class="fw-bold mt-3">Send Message</h2>
+            <hr>
+        </div>
     </div>
-</div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ contact_form| crispy }}
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    {% endif %}
+    {% endif %}
+    {% if contact_form.errors %}
+    {% for field in contact_form %}
+    {% for error in field.errors %}
+    <div class="alert alert-danger">
+        <strong>{{ error|escape }}</strong>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% for error in contact_form.non_field_errors %}
+    <div class="alert alert-danger">
+        <strong>{{ error|escape }}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
 
 
 
-{% endblock %}
+
+    {% endblock %}

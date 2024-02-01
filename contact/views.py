@@ -1,13 +1,42 @@
 from django.shortcuts import render
-from .forms import ContactForm
+from django.views import View
+from django.contrib.auth.models import User
+from django.contrib import messages
 
-# Create your views here.
-def contact(request):
-    initial_data = {}
-    if request.user.is_authenticated:
-        name = request.user.first_name
-        initial_data['name'] = name if name else request.user.username
-        initial_data['email'] = request.user.email
+from .forms import ContactUsForm
 
-    form = ContactForm(initial=initial_data)
-    return render(request, 'contact/contact.html', {'form': form})
+
+
+def get_user_instance(request):
+
+    user_email = request.user.email
+    user = User.objects.filter(email=user_email).first()
+    return user
+
+
+class ContactUsMessage(View):
+    template_name = 'contact/contact.html'
+    success_message = 'Message has been sent.'
+
+    def get(self, request,):
+        if request.user.is_authenticated:
+            email = request.user.email
+            contact_form = ContactUsForm(initial={'email': email})
+        else:
+            contact_form = ContactUsForm()
+        return render(request, 'contact/contact.html',
+                      {'contact_form': contact_form})
+
+    def post(self, request):
+        contact_form = ContactUsForm(data=request.POST)
+
+        if contact_form.is_valid():
+            contact = contact_form.save(commit=False)
+            contact.user = request.user
+            contact.save()
+            messages.success(
+                request, "Message has been sent")
+            return render(request, 'contact/received.html')
+
+        return render(request, 'contact/contact.html',
+                      {'contact_form': contact_form})
