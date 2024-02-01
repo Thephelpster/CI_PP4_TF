@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+#logo{
+    width: 20%;
+    height: auto;
+    
+}
+
+i{
+    width: 20%;
+    height: auto;
+    font-size: large;
+}
+
+a {
+    color: #00B9FC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DADDE2;
+}
+
+body {
+    background-color: #2F4858;
+    font-family: 'Abel', sans-serif;
+    color: #DADDE2;
+}
+
+.card {
+    background-color: rgb(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.booking-card {
+    color: #ced4da;
+}
+
+.bg-darker {
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.booking-success-button {
+    color: green
+}
+

@@ -10,68 +10,72 @@
     <meta name="description" content="Ten-Forward is a Star Trek themed restaurant.">
     <meta name="keywords" content="star trek, restaurant, themed, drinks, food, breakfast, lunch, dinner">
     <meta name="author" content="Jamie Phelps">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static '/site.webmanifest' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Ten-Forward</title>
+    {% block head %}
+
+    {% endblock %}
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}"><img id="logo" alt="ten-forward"
-            src="{% static 'images/star-trek-delta.jpg' %}"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img id="logo" class="" alt="ten-forward"
+                    src="{% static 'images/star-trek-delta.jpg' %}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Menus
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'food_menu' %}">Food Menu</a></li>
-                            <li><a class="dropdown-item" href="{% url 'drink_menu' %}">Drinks Menu</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'reservations' %}">Book</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'sign_up' %}">Sign Up</a>
-                </li>
-                {% endif %}
+            <div class="collapse navbar-collapse position-absolute end-0" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menus
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'food_menu' %}">Food Menu</a></li>
+                                <li><a class="dropdown-item" href="{% url 'drink_menu' %}">Drinks Menu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'reservations' %}">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sign_up' %}">Sign Up</a>
+                    </li>
+                    {% endif %}
 
-            </ul>
-
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container">
@@ -92,25 +96,38 @@
         {% endblock content %}
     </main>
 
-    <footer>
-        <div>
+    <footer class="mt-auto text-center text-white">
+        <div class="container p-lg-4 pb-0">
+            <div class="mb-4">
 
-            <section>
-                <a href="https://www.facebook.com/" target="_blank" role="button"><i class="fa-brands fa-facebook-square"></i></a>
+                <section style="height: 100px;">
 
-                <a href="https://www.instagram.com/" target="_blank" role="button"><i class="fa-brands fa-instagram-square"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" role="button"><i
+                            class="fa-brands fa-facebook-square"></i></a>
 
-                <a href="https://www.linkedin.com/in/jamiemphelps/" target="_blank" role="button"><i class="fa-brands fa-linkedin"></i></a>
 
-                <a href="https://github.com/Thephelpster" target="_blank" role="button"><i class="fa-brands fa-square-github"></i></a>
-            </section>
+                    <a href="https://www.instagram.com/" target="_blank" role="button"><i
+                            class="fa-brands fa-instagram-square"></i></a>
+
+
+                    <a href="https://www.linkedin.com/in/jamiemphelps/" target="_blank" role="button"><i
+                            class="fa-brands fa-linkedin"></i></a>
+
+
+                    <a href="https://github.com/Thephelpster" target="_blank" role="button"><i
+                            class="fa-brands fa-square-github"></i></a>
+
+                </section>
+            </div>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/82e4788df7.js" crossorigin="anonymous"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </body>
 
 </html>
