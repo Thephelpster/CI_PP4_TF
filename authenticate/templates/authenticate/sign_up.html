@@ -3,13 +3,14 @@
 {% load static %}
 
 {% block content %}
-
-<form method="POST" action="{% url 'sign_up' %}">
+<div class="row d-flex my-5 justify-content-center">
+    <div class="w-75 p-3">
+        <form method="POST" action="{% url 'sign_up' %}">
     {% csrf_token %}
 
     {% if form.errors %}
     <div class="alert alert-warning alert-dismissable" role="alert">
-        <button class="close" data-dismiss="alert">
+        <button class="btn btn-primary" data-dismiss="alert">
             <small><sup>x</sup></small>
         </button>
         <p>Your Form Has Errors...</p>
@@ -30,5 +31,8 @@
 
     <input type="submit" value="Register" class="btn btn-secondary">
 </form>
+    </div>
+</div>
+
 
 {% endblock %}

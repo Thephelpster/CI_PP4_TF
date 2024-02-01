@@ -4,46 +4,58 @@
 
 
 {% if not user.is_authenticated %}
-<p>Please login</p>
-<button class="btn btn-success" type="submit"><a href="{% url 'account_login' %}">Go to Login
-        Page</a></button>
-{% else %}
-<h1>My Bookings:</h1>
-<hr>
-{% for booking in booking_page %}
+<div class="row text-center">
+    <div class="col-12">
+        <p>Please login</p>
+        <button class="btn btn-success" type="submit"><a href="{% url 'login' %}">Go to Login
+                Page</a></button>
+        {% else %}
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-12">
+        <h1>My Bookings:</h1>
+        <hr>
+        {% for booking in booking_page %}
+    </div>
+</div>
+<div class="row d-flex my-5 justify-content-center">
+    <div class="w-75 p-3">
+        <h2 class="card-title">{{ booking.name }}</h2>
+        <p class="card-subtitle mb-2 text-muted">{{ booking.requested_date }} at
+            {{ booking.requested_time }}</p><br>
+        <p class="card-subtitle mb-2">Booking status: {{ booking.status }}.</p>
+        <p class="card-text">Number of Guests: {{ booking.guest_count }}</p>
+        <p class="card-text">Table: {{booking.table}}</p>
 
-<h2 class="card-title">{{ booking.name }}</h2>
-<p class="card-subtitle mb-2 text-muted">{{ booking.requested_date }} at
-    {{ booking.requested_time }}</p><br>
-<p class="card-subtitle mb-2">Booking status: {{ booking.status }}.</p>
-<p class="card-text">Number of Guests: {{ booking.guest_count }}.</p>
-<p class="card-text">Table: {{booking.table}}</p>
+        {% if booking.status == 'booking expired' %}
+        <a href="#" class="btn btn-danger">Expired</a>
+        {% else %}
+        <a href="{% url 'edit_booking' booking.pk %}" class="btn btn-success">Edit</a>
+        <a href="{% url 'cancel_booking' booking.pk %}" class="btn btn-danger">Cancel</a>
+        {% endif %}
 
-{% if booking.status == 'booking expired' %}
-<a href="#" class="btn btn-danger">Expired</a>
-{% else %}
-<a href="{% url 'edit_booking' booking.pk %}" class="btn btn-success">Edit</a>
-<a href="{% url 'cancel_booking' booking.pk %}" class="btn btn-danger">Cancel</a>
-{% endif %}
-
-{% endfor %}
-{% endif %}
+        {% endfor %}
+        {% endif %}
 
 
-{% if booking_page.has_previous %}
+        {% if booking_page.has_previous %}
 
-<a href="?page=1">&laquo First</a>
-<a href="?page={{ booking_page.previous_page_number }}">Previous</a>
+        <a href="?page=1">&laquo First</a>
+        <a href="?page={{ booking_page.previous_page_number }}">Previous</a>
 
-{% endif %}
-Page {{ booking_page.number }} of {{booking_page.paginator.num_pages }}
+        {% endif %}
+        Page {{ booking_page.number }} of {{booking_page.paginator.num_pages }}
 
-{% if booking_page.has_next %}
+        {% if booking_page.has_next %}
 
-<a href="?page={{ booking_page.next_page_number }}">Next</a>
-<a href="?page={{ booking_page.paginator.num_pages }}">Last &raquo</a>
+        <a href="?page={{ booking_page.next_page_number }}">Next</a>
+        <a href="?page={{ booking_page.paginator.num_pages }}">Last &raquo</a>
 
-{% endif %}
+        {% endif %}
+    </div>
+</div>
+
 
 
 {%endblock%}

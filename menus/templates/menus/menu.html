@@ -3,18 +3,20 @@
 {% load static %}
 
 {% block content %}
-<section class="container-fluid">
-    <div class="row text-center mt-4">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/gagh.jpeg' %}" class="card-img-top" alt="Image of Gagh">
+<section class="container">
+    <div class="row justify-content-center text-center mt-3">
+        <div class="col-10 col-md-3 col-lg-2 m-3 card shadow" style="width: 18rem;">
+            <img src="{% static 'images/gagh.jpeg' %}" class="card-img-top"
+                alt="Image of Gagh">
             <div class="card-body">
                 <a href="{% url 'food_menu' %}">
                     <h2>Food</h2>
                 </a>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/andorian-wiskey.jpg' %}" class="card-img-top" alt="Image of Andorian wiskey">
+        <div class="col-10 col-md-3 col-lg-2 m-3 card shadow" style="width: 18rem;">
+            <img src="{% static 'images/andorian-wiskey.jpg' %}" class="card-img-top"
+                alt="Image of Andorian wiskey">
             <div class="card-body">
                 <a href="{% url 'drink_menu' %}">
                     <h2>Drinks</h2>

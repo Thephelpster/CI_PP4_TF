@@ -3,57 +3,62 @@
 {% load static %}
 
 {% block content %}
+<section>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Ales</h2>
+            <hr>
+            {% for drink in drink_list %}
+            {% if drink.type_of_drink == 0 and drink.available == 1 %}
+            <h3>{{ drink.drink_name }}</h3>
+            {{ drink.description | safe }} £{{ drink.price }}
 
-<div>
-    <hr>
-    <h2>Ales</h2>
-    <hr>
-    {% for drink in drink_list %}
-    {% if drink.type_of_drink == 0 and drink.available == 1 %}
-    <h3>{{ drink.drink_name }}</h3>
-    {{ drink.description | safe }} £{{ drink.price }}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Wines</h2>
+            <hr>
+            {% for drink in drink_list %}
+            {% if drink.type_of_drink == 1 and drink.available == 1 %}
+            <h3>{{ drink.drink_name }}</h3>
+            {{ drink.description | safe }} £{{ drink.price }}
 
-    {% endif %}
-    {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Coffees</h2>
+            <hr>
+            {% for drink in drink_list %}
+            {% if drink.type_of_drink == 2 and drink.available == 1 %}
+            <h3>{{ drink.drink_name }}</h3>
+            {{ drink.description | safe }} £{{ drink.price }}
 
-</div>
-<div>
-    <hr>
-    <h2>Wines</h2>
-    <hr>
-    {% for drink in drink_list %}
-    {% if drink.type_of_drink == 1 and drink.available == 1 %}
-    <h3>{{ drink.drink_name }}</h3>
-    {{ drink.description | safe }} £{{ drink.price }}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Teas</h2>
+            <hr>
+            {% for drink in drink_list %}
+            {% if drink.type_of_drink == 3 and drink.available == 1 %}
+            <h3>{{ drink.drink_name }}</h3>
+            {{ drink.description | safe }} £{{ drink.price }}
 
-    {% endif %}
-    {% endfor %}
-
-</div>
-<div>
-    <hr>
-    <h2>Coffees</h2>
-    <hr>
-    {% for drink in drink_list %}
-    {% if drink.type_of_drink == 2 and drink.available == 1 %}
-    <h3>{{ drink.drink_name }}</h3>
-    {{ drink.description | safe }} £{{ drink.price }}
-
-    {% endif %}
-    {% endfor %}
-
-</div>
-<div>
-    <hr>
-    <h2>Teas</h2>
-    <hr>
-    {% for drink in drink_list %}
-    {% if drink.type_of_drink == 3 and drink.available == 1 %}
-    <h3>{{ drink.drink_name }}</h3>
-    {{ drink.description | safe }} £{{ drink.price }}
-
-    {% endif %}
-    {% endfor %}
-
-</div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {%endblock%}

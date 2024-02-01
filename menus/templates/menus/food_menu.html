@@ -3,59 +3,52 @@
 {% load static %}
 
 {% block content %}
+<section>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Bajoran</h2>
+            <hr>
+            {% for food in food_list %}
+            {% if food.type_of_food == 0 and food.available == 1 %}
+            <h3>{{ food.food_name }}</h3>
+            {{ food.description | safe }} £{{ food.price }}
 
-<div>
-    <hr>
-    <h2>Bajoran</h2>
-    <hr>
-    {% for food in food_list %}
-    {% if food.type_of_food == 0 and food.available == 1 %}
-    <h3>{{ food.food_name }}</h3>
-    {{ food.description | safe }} £{{ food.price }}
 
+            {% endif %}
+            {% endfor %}
 
-    {% endif %}
-    {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Klingon</h2>
+            <hr>
+            {% for food in food_list %}
+            {% if food.type_of_food == 1 and food.available == 1 %}
+            <h3>{{ food.food_name }}</h3>
+            {{ food.description | safe }} £{{ food.price }}
 
-</div>
-<div>
-    <hr>
-    <h2>Klingon</h2>
-    <hr>
-    {% for food in food_list %}
-    {% if food.type_of_food == 1 and food.available == 1 %}
-    <h3>{{ food.food_name }}</h3>
-    {{ food.description | safe }} £{{ food.price }}
+            {% endif %}
+            {% endfor %}
 
-    {% endif %}
-    {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="w-75 p-3">
+            <hr>
+            <h2>Talaxian</h2>
+            <hr>
+            {% for food in food_list %}
+            {% if food.type_of_food == 2 and food.available == 1 %}
+            <h3>{{ food.food_name }}</h3>
+            {{ food.description | safe }} £{{ food.price }}
 
-</div>
-<div>
-    <hr>
-    <h2>Talaxian</h2>
-    <hr>
-    {% for food in food_list %}
-    {% if food.type_of_food == 2 and food.available == 1 %}
-    <h3>{{ food.food_name }}</h3>
-    {{ food.description | safe }} £{{ food.price }}
+            {% endif %}
+            {% endfor %}
 
-    {% endif %}
-    {% endfor %}
-
-</div>
-<div>
-    <hr>
-    <h2>Mix</h2>
-    <hr>
-    {% for food in food_list %}
-    {% if food.type_of_food == 3 and food.available == 1 %}
-    <h3>{{ food.food_name }}</h3>
-    {{ food.description | safe }} £{{ food.price }}
-
-    {% endif %}
-    {% endfor %}
-
-</div>
-
+        </div>
+    </div>
+</section>
 {%endblock%}
