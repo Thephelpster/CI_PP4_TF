@@ -20,14 +20,16 @@
         <h5 class="fw-bold mt-3">Your Booking</h5>
     </div>
 </div>
-<div class="row text-center">
-    <div class="col-12">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ booking_form| crispy }}
+<div class="row d-flex my-5 justify-content-center">
+    <div class="w-75 p-3">
+        <div class="col-12 p-5 bg-darker rounded text-center booking-card">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ booking_form| crispy }}
 
-            <button class="btn btn-success" type="submit">Submit</button>
-        </form>
+                <button class="btn btn-success" type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endif %}
