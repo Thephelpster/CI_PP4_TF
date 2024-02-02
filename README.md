@@ -2,18 +2,17 @@
 Developer : Jamie Phelps
 
 [![Ten-Forward logo](./docs/images/android-chrome-192x192.png)](https://ten-forward-53badab24b10.herokuapp.com/)
-[![Am I Responsive Mockup](./docs/images/amiresponsive.png)](https://ten-forward-53badab24b10.herokuapp.com/)
 
 
 # Table of Content
 
-1. [Project Discription](#project-description)
+1. [Project Description](#project-description)
 2. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
     2. [Site Owner Goals](#site-owner-goals)
 3. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
-    2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
     3. [User Stories](#user-stories)
 4. [Design](#design)
     1. [Design Choices](#design-choices)
@@ -32,41 +31,61 @@ Developer : Jamie Phelps
     3. [Accessibility](#accessibility)
     4. [Mock up](#mock-up)
     5. [Performance](#performance)
-    6. [Device testing](#performing-tests-on-various-devices)
+    6. [Device Testing](#performing-tests-on-various-devices)
     7. [Browser Compatibility](#browser-compatability)
-    8. [Testing User Stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
 11. [Acknowledgements](#acknowledgements)
 
 # Project Description
-
+This project is a website for a restaurant that has a Star Trek theme, delivering food and drink that was taken from the TV shows. On this website you can view the menus, contact the restaurant, make an account and book a table with them.
 
 # Project Goals
 
 ## User Goals
-
+* To create a table booking,
+* To be able to view, edit and cancel bookings,
+* To view menus and contact info.
 
 ## Site Owner Goals
-
+* To provide a solution to allow users to book a table online,
+* To attract more business with a well crafted site,
+* Provide a modern application with an easy navigation.
 
 # User Experience
 
 ## Target Audience
+* Users that wish to book a table for a meal or a party with family and friends,
+* Past and new customers for the business,
+* Tourists visiting the area that are looking for a meal, a drink or both,
+* Fans of the show.
 
-
-## User Requrements and Expectations
-
+## User Requirements and Expectations
+* Accessible
+* A welcoming design
+* Contact information
+* Accessibility
 
 ## User Stories
-### First Time User
 
+1. As a first time user I can navigate the site so that I can find the page I'm looking for,
+2. As a first time user I can use the footer so that I can access the socials,
+3. As a user I can make a booking at a desired time and date so that I can reserve a table,
+4. As a user I can visit the about us page so that I can find out information about the restaurant,
+5. As a user I can view the restaurant opening times and contact details so that I know when it will be open and how to contact them,
+6. As a user I can go to the booking page so that I can make a booking,
+7. As a user I can edit my booking so that I can change the time and date I choose,
+8. As a user I can edit my booking so that I can delete my booking,
+9. As a new user I can go to the registration section so that so I can register with the restaurant,
+10. As a user I can go to the login page so that I can login into the site,
+11. As a user I can see my login status so that I can tell whether or not I'm logged in,
+12. As a user I can see the menus so that I can decide what to have at the restaurant,
+13. As an Admin or Authorised User I can login so that I can access the back end of the site,
+14. As an Admin I can add a manual booking so that I can add a booking if someone books in person or through email,
+15. As an Admin I can edit the menus so that I can change what the restaurant offers,
+16. As an Admin I can set up custom error pages so that if there is problem the page is displayed.
 
-### Returning User
-
-
-### Website Owner
 
 
 ### Kanban & User Stories
@@ -80,11 +99,9 @@ Developer : Jamie Phelps
 ![User Stories](./docs/images/user-stories.png)
 
 # Design
-## Design Choices
-
 
 ## Colour
-
+At first I wanted to use the Star Trek uniform colours as the colour scheme for the site but after checking them in a accessibility program I found that they would be unsuitable to use. I therefore choose this colour pallet to work from to make the experience better for the user.
 
 ![Colour Generator](./docs/images/colour-generator.png)
 
@@ -94,16 +111,56 @@ Developer : Jamie Phelps
 
 # Structure
 
-## Website Pages
-
-
-
 ## Database
 <details>
 <summary>Database Diagram</summary>
 <br>
 <img src="./docs/images/database-diagram.png" alt="Database Diagram"> 
 </details>
+
+## Food Model
+The Food Model contains the following:
+* food_id
+* food_name
+* description
+* price
+* available
+
+## Drink Model
+The Drink Model contains the following:
+* drink_id
+* drink_name
+* description
+* price
+* available
+
+## Table Model
+The Table Model contains the following:
+* table_id (PrimaryKey)
+* table_name
+* max_seats
+
+## Booking Model
+The Booking Model contains the following:
+* booking_id (PrimaryKey)
+* created_date
+* requested_date
+* requested_time
+* table (ForeignKey)
+* user (ForeignKey)
+* status
+* seats
+* guest_count
+
+## ContactUs Model
+The ContactUs Model contains the following:
+* message_id (PrimaryKey)
+* created_date 
+* user (ForeignKey)
+* name (ForeignKey)
+* email (ForeignKey)
+* message
+
 
 ## Wireframes
 <details>
@@ -159,6 +216,8 @@ Developer : Jamie Phelps
 * Font Awesome
 * Favicon.io
 * W3S Tutourials
+* Heroku Platform
+* Chrome dev tools
 
 
 # Features
@@ -170,251 +229,110 @@ Developer : Jamie Phelps
 
 ### Navbar
 
-
-![Navbar large](./assets/readme-images/navbar-large.png)
-![Navbar Mobile](./assets/readme-images/navbar-mobile.png)
-
-### First Page Carousel
-
-
-![Home Page Carousel](./assets/readme-images/carousel-home-page.png)
-
-### Company Background Information and Background Image
-
-
-![Background Info and Carousel Images](./assets/readme-images/general-company-information.png)
-
-### Newsletter Signup
-
-
-![Newsletter](./assets/readme-images/newsletter-signup.png)
+![Navbar](./docs/images/navbar.png)
 
 ### Footer
 
+![Footer](./docs/images/footer.png)
 
-![Footer](./assets/readme-images/footer.png)
+### About Us
 
-### About Page Information
+![About Us](./docs/images/about-us-page.png)
 
+### Booking
 
-![About page information](./assets/readme-images/about-page-information.png)
+![Booking](./docs/images/booking-page.png)
 
-### BBC Points West Interview Video
+### Contact Us
 
+![Contact Us](./docs/images/contact-us-page.png)
 
-![BBC Interview Video](./assets/readme-images/interview-video.png)
+### Food/Drinks
 
-### The Conversion Page
+![Food/Drinks](./docs/images/food-page.png)
 
+### Home
 
-![Conversion Page](./assets/readme-images/conversion-page.png)
+![Home](./docs/images/home-page.png)
 
-### Contact Table
+### My Bookings
 
+![My Bookings](./docs/images/my-booking-page.png)
 
-![Contact Table](./assets/readme-images/contact-table.png)
+### Sign Up
 
-### Contact Form
-
-
-![Contact Form](./assets/readme-images/contact-form.png)
-
-### Google Map iframe
-
-
-![Google Map iframe](./assets/readme-images/google-map-iframe.png)
-
-### Gallery Page
+![Sign Up](./docs/images/sign-up-page.png)
 
 
-![Review Section](./assets/readme-images/gallery-review.png)
 
 ## Future Features
-
+In the future I would like to be able to include a blog where users can add comments to posts that have been made. It would also be nice to improve the look and feel of the site so that it was a little bit more star trek themed and adding more photos of the food and drinks.
 
 # Validation
 I put my website through the following validation tools:
 
-## HTML Validation
-<details>
-<summary>Home</summary>
-<br>
-<img src="./assets/readme-images/html-checker-home.png" alt="HTML Validation Home">
-</details>
+### HTML Validation
+![About Us](./docs/images/about-us-html-checker.png)
 
-<details>
-<summary>About</summary>
-<br>
-<img src="./assets/readme-images/html-checker-about.png" alt="HTML Validation About">
-</details>
+![Booking](./docs/images/booking-html-checker.png)
 
-<details>
-<summary>Conversion</summary>
-<br>
-<img src="./assets/readme-images/html-checker-conversions.png" alt="HTML Validation Conversion">
-</details>
+![Contact Us](./docs/images/contact-us-html-checker.png)
 
-<details>
-<summary>Contact</summary>
-<br>
-<img src="./assets/readme-images/html-checker-contact.png" alt="HTML Validation Contact">
-</details>
+![Food](./docs/images/food-html-checker.png)
 
-<details>
-<summary>Gallery</summary>
-<br>
-<img src="./assets/readme-images/html-checker-gallery.png" alt="HTML Validation Gallery">
-</details>
+![Home](./docs/images/home-html-checker.png)
 
-<details>
-<summary>404 Error</summary>
-<br>
-<img src="./assets/readme-images/html-checker-404-error.png" alt="HTML Validation 404 Error">
-</details>
+![Sign Up](./docs/images/sign-ip-html-checker.png)
 
-### CSS Validation: 
-<details>
-<summary>Whole Page</summary>
-<br>
-<img src="./assets/readme-images/css-checker-whole-page.png" alt="CSS Checker Whole Page">
-</details>
-
-<details>
-<summary>style.css</summary>
-<br>
-<img src="./assets/readme-images/css-checker-style-css.png" alt="CSS Checker style.css">
-</details>
-
-### Accessibility: 
-<details>
-<summary>Home</summary>
-<br>
-<img src="./assets/readme-images/wave-home.png" alt="Wave Accessibility Home">
-</details>
-
-<details>
-<summary>About</summary>
-<br>
-<img src="./assets/readme-images/wave-about.png" alt="Wave Accessibility About">
-</details>
-
-<details>
-<summary>Conversion</summary>
-<br>
-<img src="./assets/readme-images/wave-conversions.png" alt="Wave Accessibility Conversion">
-</details>
-
-<details>
-<summary>Contact</summary>
-<br>
-<img src="./assets/readme-images/wave-contact.png" alt="Wave Accessibility Contact">
-</details>
-
-<details>
-<summary>Gallery</summary>
-<br>
-<img src="./assets/readme-images/wave-gallery.png" alt="Wave Accessibility Gallery">
-</details>
-
-<details>
-<summary>404 Error</summary>
-<br>
-<img src="./assets/readme-images/wave-404.png" alt="Wave Accessibility 404 Error">
-</details>
-
-### Mock up
-<details>
-<summary>Am I Responsive</summary>
-<br>
-<img src="./assets/images/am-i-responsive.png" alt="Wave Accessibility 404 Error">
-</details>
+### CSS Validation
+![Style Checker](./docs/images/style-css-checker.png)
 
 ### Performance
-<details>
-<summary>Home Mobile</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-home-mobile.png" alt="lighthouse-home-mobile">
-</details>
+#### Booking
+![Mobile](./docs/images/booking-lighthouse-mobile.png)
+![Desktop](./docs/images/booking-lighthouse-desktop.png)
 
-<details>
-<summary>Home Desktop</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-home-desktop.png" alt="lighthouse-home-desktop">
-</details>
+#### Contact Us
+![Mobile](./docs/images/contact-us-lighthouse-mobile.png)
+![Desktop](./docs/images/contact-us-lighthouse-desktop.png)
 
+#### Drinks
+![Mobile](./docs/images/drinks-lighthouse-mobile.png)
+![Desktop](./docs/images/drinks-lighthouse-desktop.png)
 
-<details>
-<summary>About Mobile</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-about-mobile.png" alt="lighthouse-about-mobile">
-</details>
+#### Food
+![Mobile](./docs/images/food-lighthouse-mobile.png)
+![Desktop](./docs/images/food-lighthouse-desktop.png)
 
-<details>
-<summary>About Desktop</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-about-desktop.png" alt="lighthouse-about-desktop">
-</details>
+#### Home
+![Mobile](./docs/images/home-lighthouse-mobile.png)
+![Desktop](./docs/images/home-lighthouse-desktop.png)
 
-<details>
-<summary>Conversion Mobile</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-conversion-mobile.png" alt="lighthouse-conversion-mobile">
-</details>
+#### Login
+![Mobile](./docs/images/login-lighthouse-mobile.png)
+![Desktop](./docs/images/login-lighthouse-desktop.png)
 
-<details>
-<summary>Conversion Desktop</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-conversion-desktop.png" alt="lighthouse-conversion-desktop">
-</details>
+#### My Bookings
+![Mobile](./docs/images/mybookings-lighthouse-mobile.png)
+![Desktop](./docs/images/mybookings-lighthouse-desktop.png)
 
-<details>
-<summary>Contact Mobile</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-contact-mobile.png" alt="lighthouse-contact-mobile">
-</details>
-
-<details>
-<summary>Contact Desktop</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-contact-desktop.png" alt="lighthouse-contact-desktop">
-</details>
-
-<details>
-<summary>Gallery Mobile</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-gallery-mobile.png" alt="lighthouse-gallery-mobile">
-</details>
-
-<details>
-<summary>Gallery Desktop</summary>
-<br>
-<img src="./assets/readme-images/lighthouse-gallery-desktop.png" alt="lighthouse-gallery-desktop">
-</details>
+#### Menu
+![Mobile](./docs/images/menu-lighthouse-mobile.png)
 
 ### Device testing
-* iPhone XS Max
-* iPad Pro
-* Hp Laptop 
-* Hp Desktop
+* IPhone XS Max
+* IPad Pro
+* HP Laptop 
+* HP Desktop
 
-All pages have also been tested on all available screen sizes on google chrome dev tools 
+All pages have also been tested on all available screen sizes on google chrome dev tools.
 
 ### Browser Compatibility
 Google Chrome
 Microsoft Edge
 
-### Testing user stories
-1. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
 ## Bugs
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-|  |  |
+A lot of my time bug fixing on this project has been spent on fixing issues to do with deployment to Heroku and linking to the Elephant database once deployed.
 
 
 # Deployment
@@ -460,7 +378,7 @@ DATABASE_URL=postgres://[username]:[password]@[host]:[port]/[database_name]
 4. Create a superuser with your own credentials:
 `python3 manage.py migrate`
 
-5. Run the Django sever:
+5. Run the Django server:
 `python manage.py runserver`
 The address of the server will appear in the terminal window.
 Add /admin to the address to access the Django admin panel using your superuser credentials.
@@ -529,7 +447,7 @@ Under Deployment Method, choose GitHub and search for your repository and click 
 
 ### Forking the GitHub Repository
 The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
-That can be done by following these steps:
+This can be done by following these steps:
 First, log in to GitHub and locate the [Project's Repository](https://github.com/Thephelpster/CI_PP4_TF).
 At the top of the Repository, on the right side of the page, locate the "Fork" button.
 A copy of the Repository should now be in your GitHub account.
@@ -543,12 +461,12 @@ The web site is deployed on Heroku and can be found [here](https://ten-forward-5
 
 
 # Credits
-
+* [Code Institute](https://learn.codeinstitute.net)
+* [Codemy](https://members.codemy.com)
 
 ## Content
-
-
-## Media
+Images and ideas relating to Star Trek are owned by Paramount and CBS
+Descriptions of food and drinks comes from Memory Alpha
 
 
 ## Code and Design
@@ -565,8 +483,9 @@ https://favicon.io/
 https://fontawesome.com/
 
 # Acknowledgements
-I'd like to thank these people who gave me all the help and support i needed to finish and make this project look as good as it does.
+I'd like to thank these people who gave me all the help and support I needed to finish and make this project look as good as it does.
 
 * Mo Shami, my mentor, for all the guidance, help and advice.
-* Tomislav Dukez, whos been very patient with helping me through the simplest of issues I've had and kept me going when I've wanted to quit, your awesome!
-* Kate Cleal, my partner, for designing the 400, 403, 404 and 500 page images and being my spell checker for all the text. Shes alos been my rock throughout this whole project giving me the time to be able to complete it.
+* Roman Rakic, who helped me get the project finished off when I was stressing out about not finishing in time.
+* Tomislav Dukez, whos been very patient with helping me through the simplest of issues I've had and kept me going when I've wanted to quit, you're awesome!
+* Kate Cleal, my partner, for designing the 400, 403, 404 and 500 page images and being my spell checker for all the text. She's also been my rock throughout this whole project giving me the time to be able to complete it.
