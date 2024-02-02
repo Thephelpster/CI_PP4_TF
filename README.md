@@ -1,110 +1,572 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Ten-Forward
+Developer : Jamie Phelps
 
-Welcome USER_NAME,
+[![Ten-Forward logo](./docs/images/android-chrome-192x192.png)](https://ten-forward-53badab24b10.herokuapp.com/)
+[![Am I Responsive Mockup](./docs/images/amiresponsive.png)](https://ten-forward-53badab24b10.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Table of Content
 
-## Gitpod Reminders
+1. [Project Discription](#project-description)
+2. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+3. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Stories](#user-stories)
+4. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. [Colour](#colour)
+    3. [Fonts](#fonts)
+    4. [Wireframes](#wireframes)
+5. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+6. [Features](#features)
+    1. [Existing Features](#existing-features)
+    2. [Future Features](#future-features)
+7. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Mock up](#mock-up)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser Compatibility](#browser-compatability)
+    8. [Testing User Stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Project Description
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+# Project Goals
 
-Another blue button should appear to click: _Open Browser_.
+## User Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+## Site Owner Goals
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# User Experience
 
-To log into the Heroku toolbelt CLI:
+## Target Audience
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## User Requrements and Expectations
 
-------
 
-## Release History
+## User Stories
+### First Time User
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Returning User
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Website Owner
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Kanban & User Stories
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* GitHub Kanban was used to track all open user stories
+* Todo, In Progress, Done headings were used in the kanban
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Kanban Mid](./docs/images/kanban-mid.png)
+![Kanban Finished](./docs/images/kanban-finished.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![User Stories](./docs/images/user-stories.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Design
+## Design Choices
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Colour
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Colour Generator](./docs/images/colour-generator.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Fonts
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Google Font Abel](./docs/images/font-abel.png)
 
-------
+# Structure
 
-## FAQ about the uptime script
+## Website Pages
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+## Database
+<details>
+<summary>Database Diagram</summary>
+<br>
+<img src="./docs/images/database-diagram.png" alt="Database Diagram"> 
+</details>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Wireframes
+<details>
+<summary>Home</summary>
+<br>
+<img src="./docs/wireframes/home-desktop.png" alt="Home Wireframe PC"> <img src="./docs/wireframes/home-mobile.png" alt="Home Wireframe Mobile">
+</details>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<details>
+<summary>About Us</summary>
+<br>
+<img src="./docs/wireframes/about-us-desktop.png" alt="About Wireframe PC"> <img src="./docs/wireframes/about-us-mobile.png" alt="About Wireframe Mobile">
+</details>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<details>
+<summary>Menus</summary>
+<br>
+<img src="./docs/wireframes/menus-desktop.png" alt="Conversion Wireframe PC"> <img src="./docs/wireframes/menus-mobile.png" alt="Conversion Wireframe Mobile">
+</details>
 
-**So….?**
+<details>
+<summary>Drinks/Food</summary>
+<br>
+<img src="./docs/wireframes/food-drink-desktop.png" alt="Drinks and Food PC"> <img src="./docs/wireframes/food-drink-mobile.png" alt="Drinks and Food Mobile">
+</details>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<details>
+<summary>Contact Us</summary>
+<br>
+<img src="./docs/wireframes/contact-us-desktop.png" alt="Contact Us PC"> <img src="./docs/wireframes/contact-us-mobile.png" alt="Contact Us Mobile">
+</details>
 
-**Can I opt out?**
+<details>
+<summary>Booking</summary>
+<br>
+<img src="./docs/wireframes/book-desktop.png" alt="Booking PC"> <img src="./docs/wireframes/book-mobile.png" alt="Booking Mobile">
+</details>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+# Technologies Used
+## Languages
+* HTML
+* CSS
+* Python
+* Django
+
+## Frameworks & Tools
+* Git
+* GitHub
+* GitPod
+* Bootstrap
+* Balsamiq
+* Google Fonts
+* Font Awesome
+* Favicon.io
+* W3S Tutourials
+
+
+# Features
+## Existing Features
+### Favicon
+
+
+![favicon 16x16](./docs/images/favicon-16x16.png) ![favicon 32x32](./docs/images/favicon-32x32.png)
+
+### Navbar
+
+
+![Navbar large](./assets/readme-images/navbar-large.png)
+![Navbar Mobile](./assets/readme-images/navbar-mobile.png)
+
+### First Page Carousel
+
+
+![Home Page Carousel](./assets/readme-images/carousel-home-page.png)
+
+### Company Background Information and Background Image
+
+
+![Background Info and Carousel Images](./assets/readme-images/general-company-information.png)
+
+### Newsletter Signup
+
+
+![Newsletter](./assets/readme-images/newsletter-signup.png)
+
+### Footer
+
+
+![Footer](./assets/readme-images/footer.png)
+
+### About Page Information
+
+
+![About page information](./assets/readme-images/about-page-information.png)
+
+### BBC Points West Interview Video
+
+
+![BBC Interview Video](./assets/readme-images/interview-video.png)
+
+### The Conversion Page
+
+
+![Conversion Page](./assets/readme-images/conversion-page.png)
+
+### Contact Table
+
+
+![Contact Table](./assets/readme-images/contact-table.png)
+
+### Contact Form
+
+
+![Contact Form](./assets/readme-images/contact-form.png)
+
+### Google Map iframe
+
+
+![Google Map iframe](./assets/readme-images/google-map-iframe.png)
+
+### Gallery Page
+
+
+![Review Section](./assets/readme-images/gallery-review.png)
+
+## Future Features
+
+
+# Validation
+I put my website through the following validation tools:
+
+## HTML Validation
+<details>
+<summary>Home</summary>
+<br>
+<img src="./assets/readme-images/html-checker-home.png" alt="HTML Validation Home">
+</details>
+
+<details>
+<summary>About</summary>
+<br>
+<img src="./assets/readme-images/html-checker-about.png" alt="HTML Validation About">
+</details>
+
+<details>
+<summary>Conversion</summary>
+<br>
+<img src="./assets/readme-images/html-checker-conversions.png" alt="HTML Validation Conversion">
+</details>
+
+<details>
+<summary>Contact</summary>
+<br>
+<img src="./assets/readme-images/html-checker-contact.png" alt="HTML Validation Contact">
+</details>
+
+<details>
+<summary>Gallery</summary>
+<br>
+<img src="./assets/readme-images/html-checker-gallery.png" alt="HTML Validation Gallery">
+</details>
+
+<details>
+<summary>404 Error</summary>
+<br>
+<img src="./assets/readme-images/html-checker-404-error.png" alt="HTML Validation 404 Error">
+</details>
+
+### CSS Validation: 
+<details>
+<summary>Whole Page</summary>
+<br>
+<img src="./assets/readme-images/css-checker-whole-page.png" alt="CSS Checker Whole Page">
+</details>
+
+<details>
+<summary>style.css</summary>
+<br>
+<img src="./assets/readme-images/css-checker-style-css.png" alt="CSS Checker style.css">
+</details>
+
+### Accessibility: 
+<details>
+<summary>Home</summary>
+<br>
+<img src="./assets/readme-images/wave-home.png" alt="Wave Accessibility Home">
+</details>
+
+<details>
+<summary>About</summary>
+<br>
+<img src="./assets/readme-images/wave-about.png" alt="Wave Accessibility About">
+</details>
+
+<details>
+<summary>Conversion</summary>
+<br>
+<img src="./assets/readme-images/wave-conversions.png" alt="Wave Accessibility Conversion">
+</details>
+
+<details>
+<summary>Contact</summary>
+<br>
+<img src="./assets/readme-images/wave-contact.png" alt="Wave Accessibility Contact">
+</details>
+
+<details>
+<summary>Gallery</summary>
+<br>
+<img src="./assets/readme-images/wave-gallery.png" alt="Wave Accessibility Gallery">
+</details>
+
+<details>
+<summary>404 Error</summary>
+<br>
+<img src="./assets/readme-images/wave-404.png" alt="Wave Accessibility 404 Error">
+</details>
+
+### Mock up
+<details>
+<summary>Am I Responsive</summary>
+<br>
+<img src="./assets/images/am-i-responsive.png" alt="Wave Accessibility 404 Error">
+</details>
+
+### Performance
+<details>
+<summary>Home Mobile</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-home-mobile.png" alt="lighthouse-home-mobile">
+</details>
+
+<details>
+<summary>Home Desktop</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-home-desktop.png" alt="lighthouse-home-desktop">
+</details>
+
+
+<details>
+<summary>About Mobile</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-about-mobile.png" alt="lighthouse-about-mobile">
+</details>
+
+<details>
+<summary>About Desktop</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-about-desktop.png" alt="lighthouse-about-desktop">
+</details>
+
+<details>
+<summary>Conversion Mobile</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-conversion-mobile.png" alt="lighthouse-conversion-mobile">
+</details>
+
+<details>
+<summary>Conversion Desktop</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-conversion-desktop.png" alt="lighthouse-conversion-desktop">
+</details>
+
+<details>
+<summary>Contact Mobile</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-contact-mobile.png" alt="lighthouse-contact-mobile">
+</details>
+
+<details>
+<summary>Contact Desktop</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-contact-desktop.png" alt="lighthouse-contact-desktop">
+</details>
+
+<details>
+<summary>Gallery Mobile</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-gallery-mobile.png" alt="lighthouse-gallery-mobile">
+</details>
+
+<details>
+<summary>Gallery Desktop</summary>
+<br>
+<img src="./assets/readme-images/lighthouse-gallery-desktop.png" alt="lighthouse-gallery-desktop">
+</details>
+
+### Device testing
+* iPhone XS Max
+* iPad Pro
+* Hp Laptop 
+* Hp Desktop
+
+All pages have also been tested on all available screen sizes on google chrome dev tools 
+
+### Browser Compatibility
+Google Chrome
+Microsoft Edge
+
+### Testing user stories
+1. 
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+
+## Bugs
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+|  |  |
+
+
+# Deployment
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone the repository:
+
+- `git clone https://github.com/Thephelpster/CI_PP4_TF`
+
+If done locally, the virtual environment needs to be created and activated. To do so, in your IDE Terminal, type the following commands:
+```
+python3 -m venv venv
+```
+
+If on Linux/MacOS, type the following command for activation:
+```
+source venv/bin/activate
+```
+On Windows type the following command for activation:
+```
+venv\Scripts\activate
+```
+
+***
+
+After cloning or opening the repository in Gitpod, you will need to:
+
+1. Create your own `.env` file in the root level of the project:
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+SECRET_KEY=[your_secret_key]
+DEBUG=True
+DATABASE_URL=postgres://[username]:[password]@[host]:[port]/[database_name]
+```
+**Ensure the `.env` file is added to your `.gitignore` file so it doesn't get pushed to a public repository.
+
+2. Run `pip3 install -r requirements.txt` to install required Python packages.
+
+3. Migrate the database models using:
+`python3 manage.py migrate`
+
+4. Create a superuser with your own credentials:
+`python3 manage.py migrate`
+
+5. Run the Django sever:
+`python manage.py runserver`
+The address of the server will appear in the terminal window.
+Add /admin to the address to access the Django admin panel using your superuser credentials.
+
+### Heroku Deployment
+
+Sign up to [Heroku](https://heroku.com/) for free if you don't already have an account.
+
+1. Create a new app in Heroku.
+
+2. In the Resources tab of your app in the Heroku dashboard, click Add-Ons and select Heroku Postgres. Select Hobby Dev - Free as your plan.
+
+3. When Heroku Postgres is installed, click the Settings tab in the Heroku Dashboard.
+Click Reveal Config Vars, and add the same variables from your `.env` file here, except for `DEBUG`, as you don't want debug mode on the deployed project.
+
+4. Copy the value of `DATABASE_URL` from the Config Vars. In your `settings.py` file, comment out the default database configuration, and add a new one with the Postgres url.
+
+```
+DATABASES = {
+    'default': dj_database_url.parse('your DATABASE_URL here'),
+}
 ```
 
-**Anything more?**
+5. Migrate the database models using:
+`python3 manage.py migrate`
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+6. Create a superuser with your own credentials:
+`python3 manage.py migrate`
 
----
+7. Create a file called `Procfile` (no extension) containing the following:
+```
+web: gunicorn core.wsgi
+```
 
-Happy coding!
+8. Run `pip3 install -r requirements.txt` to install required Python packages.
+
+9. Add the url of your Heroku app ('https://ten-forward-53badab24b10.herokuapp.com/') to your `settings.py` file:
+
+```
+ALLOWED_HOSTS = [
+    'ten-forward-53badab24b10.herokuapp.com',...
+]
+```
+
+10. Disable collect static so that Heroku doesn't try to collect static files when you deploy by adding the following to your Heroku Config Vars in the Settings tab of Heroku dashboard:
+
+```
+DISABLE_COLLECTSTATIC=1
+```
+
+The same variable has to be removed from Heroku Config Vars when you want to collect static files (for the testing and final deployment).
+
+11. Stage and commit your files to GitHub
+```
+git add . 
+git commit -m "Commit message"
+git push
+```
+
+12. In the Heroku dashboard for your App, select Deploy.
+Under Deployment Method, choose GitHub and search for your repository and click Connect.
+
+13. Select Enable Automatic Deployments, and then Deploy Branch. Heroku will build the App from the branch you selected.
+
+14. Now whenever you push your commits to GitHub, Heroku will rebuild the application.
+
+### Forking the GitHub Repository
+The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
+That can be done by following these steps:
+First, log in to GitHub and locate the [Project's Repository](https://github.com/Thephelpster/CI_PP4_TF).
+At the top of the Repository, on the right side of the page, locate the "Fork" button.
+A copy of the Repository should now be in your GitHub account.
+You can now propose changes to the Repository by creating a Pull Request.
+
+### Live deployment
+The web site is deployed on Heroku and can be found [here](https://ten-forward-53badab24b10.herokuapp.com/).
+
+
+[Back to top ⇧](#table-of-contents)
+
+
+# Credits
+
+
+## Content
+
+
+## Media
+
+
+## Code and Design
+* Colorspace - for the colour pallet
+
+
+* Googlefonts - for the font styles
+
+
+* Favicon.io - for converting the logo into a favicon
+https://favicon.io/
+
+* Font Awesome - for the social media fonts used in the footer
+https://fontawesome.com/
+
+# Acknowledgements
+I'd like to thank these people who gave me all the help and support i needed to finish and make this project look as good as it does.
+
+* Mo Shami, my mentor, for all the guidance, help and advice.
+* Tomislav Dukez, whos been very patient with helping me through the simplest of issues I've had and kept me going when I've wanted to quit, your awesome!
+* Kate Cleal, my partner, for designing the 400, 403, 404 and 500 page images and being my spell checker for all the text. Shes alos been my rock throughout this whole project giving me the time to be able to complete it.
